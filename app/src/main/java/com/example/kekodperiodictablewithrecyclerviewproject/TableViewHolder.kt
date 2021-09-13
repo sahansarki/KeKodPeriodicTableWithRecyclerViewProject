@@ -13,8 +13,13 @@ class TableViewHolder(private val binding: AdapterItemElementBinding) :
     fun bind(element: Element) {
 
         binding.element = element
+
         binding.card.setOnClickListener {
-           Toast.makeText(binding.root.context, "Clicked to ${element.elementFullName}",Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                binding.root.context,
+                "Clicked to ${element.elementFullName}",
+                Toast.LENGTH_SHORT
+            ).show()
         }
 
 
