@@ -6,7 +6,7 @@ object DummyData {
         val elements = ArrayList<Element>()
 
         for (i in 1..18) {
-            val element = Element(1, "H", "Hidrojen")
+            val element = Element(1, "K", "Hidrojen")
             elements.add(element)
         }
 

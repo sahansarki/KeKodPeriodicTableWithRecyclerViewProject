@@ -3,6 +3,7 @@ package com.example.kekodperiodictablewithrecyclerviewproject
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kekodperiodictablewithrecyclerviewproject.databinding.AdapterItemElementBinding
 
 class TableAdapter(private val elementList: ArrayList<Element>, val type: Type) :
     RecyclerView.Adapter<TableViewHolder>() {
@@ -10,9 +11,11 @@ class TableAdapter(private val elementList: ArrayList<Element>, val type: Type) 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TableViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val itemView = inflater.inflate(R.layout.adapter_item_element, parent, false)
 
-        return TableViewHolder(itemView)
+        val binding = AdapterItemElementBinding.inflate(inflater)
+        //val itemView = inflater.inflate(R.layout.adapter_item_element, parent, false)
+        //val itemView = binding.root.rootView
+        return TableViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: TableViewHolder, position: Int) {
