@@ -22,11 +22,23 @@ class TableAdapter(private val elementList: ArrayList<Element>, val type: Type) 
                 if (position == 0 || position == 17) {
                     val element = elementList[position]
                     holder.bind(element)
+                } else {
+                    holder.changeVisibility()
                 }
             Type.LINE2AND3 ->
                 if (position < 2 || position > 11) {
                     val element = elementList[position]
                     holder.bind(element)
+                } else {
+                    holder.changeVisibility()
+                }
+
+            Type.LINELAST ->
+                if (position in 2..16) {
+                    val element = elementList[position]
+                    holder.bind(element)
+                } else {
+                    holder.changeVisibility()
                 }
 
             else -> {
