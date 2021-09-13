@@ -2,19 +2,24 @@ package com.example.kekodperiodictablewithrecyclerviewproject
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kekodperiodictablewithrecyclerviewproject.databinding.AdapterItemElementBinding
 
-class TableAdapter(private val elementList: ArrayList<Element>, val type: Type) :
+class TableAdapter(private val elementList: ArrayList<Element>, private val type: Type) :
     RecyclerView.Adapter<TableViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TableViewHolder {
         val inflater = LayoutInflater.from(parent.context)
 
-        val binding = AdapterItemElementBinding.inflate(inflater)
-        //val itemView = inflater.inflate(R.layout.adapter_item_element, parent, false)
-        //val itemView = binding.root.rootView
+        val binding = DataBindingUtil.inflate<AdapterItemElementBinding>(
+            inflater,
+            R.layout.adapter_item_element,
+            parent,
+            false
+        )
+
         return TableViewHolder(binding)
     }
 
