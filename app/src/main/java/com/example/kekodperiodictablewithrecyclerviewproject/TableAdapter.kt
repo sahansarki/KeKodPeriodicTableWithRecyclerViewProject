@@ -9,6 +9,9 @@ import com.example.kekodperiodictablewithrecyclerviewproject.databinding.Adapter
 class TableAdapter(private val elementList: ArrayList<Element>, private val type: Type) :
     RecyclerView.Adapter<TableViewHolder>() {
 
+    private var line1 = 0
+    private var line2_3 = 2
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TableViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -28,16 +31,27 @@ class TableAdapter(private val elementList: ArrayList<Element>, private val type
         when (type) {
             Type.LINE1 ->
                 if (position == 0 || position == 17) {
-                    val element = elementList[position]
+
+                    val element = elementList[line1]
                     holder.bind(element)
+                    line1++
+
+                    if(position == 17){
+                        return
+                    }
                 } else {
                     holder.changeVisibility()
                 }
             Type.LINE2AND3 ->
                 if (position < 2 || position > 11) {
-                    val element = elementList[position]
+                    val element = elementList[line2_3]
                     holder.bind(element)
+                    line2_3++
+                    if(position == 17) {
+                        return
+                    }
                 } else {
+
                     holder.changeVisibility()
                 }
 
@@ -46,10 +60,16 @@ class TableAdapter(private val elementList: ArrayList<Element>, private val type
                     val element = elementList[position]
                     holder.bind(element)
                 } else {
+                    if(position == 18) {
+                        return
+                    }
                     holder.changeVisibility()
                 }
 
             else -> {
+                if(position == 18) {
+                    return
+                }
                 val element = elementList[position]
                 holder.bind(element)
             }
@@ -60,7 +80,9 @@ class TableAdapter(private val elementList: ArrayList<Element>, private val type
 
     }
 
-    override fun getItemCount() = elementList.size
+    override fun getItemCount() : Int {
+        return 18
+    }
 
 
 }
