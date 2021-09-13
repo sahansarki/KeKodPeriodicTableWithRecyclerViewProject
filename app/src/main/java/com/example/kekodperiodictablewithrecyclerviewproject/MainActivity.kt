@@ -25,13 +25,13 @@ class MainActivity : AppCompatActivity() {
         findViewById<RecyclerView>(R.id.rc_table7).adapter = adapter3
         findViewById<RecyclerView>(R.id.rc_table8).adapter = adapter3
 
-        findViewById<RecyclerView>(R.id.rc_table1).layoutManager = GridLayoutManager(this,1,RecyclerView.HORIZONTAL,false)
-        findViewById<RecyclerView>(R.id.rc_table2).layoutManager = GridLayoutManager(this,1,RecyclerView.HORIZONTAL,false)
-        findViewById<RecyclerView>(R.id.rc_table3).layoutManager = GridLayoutManager(this,1,RecyclerView.HORIZONTAL,false)
-        findViewById<RecyclerView>(R.id.rc_table4).layoutManager = GridLayoutManager(this,1,RecyclerView.HORIZONTAL,false)
-        findViewById<RecyclerView>(R.id.rc_table5).layoutManager = GridLayoutManager(this,1,RecyclerView.HORIZONTAL,false)
-        findViewById<RecyclerView>(R.id.rc_table6).layoutManager = GridLayoutManager(this,1,RecyclerView.HORIZONTAL,false)
-        findViewById<RecyclerView>(R.id.rc_table7).layoutManager = GridLayoutManager(this,1,RecyclerView.HORIZONTAL,false)
-        findViewById<RecyclerView>(R.id.rc_table8).layoutManager = GridLayoutManager(this,1,RecyclerView.HORIZONTAL,false)
+        findViewById<RecyclerView>(R.id.rc_table1).layoutManager = GridLayoutManager(this,18,RecyclerView.VERTICAL,false)
+        findViewById<RecyclerView>(R.id.rc_table2).layoutManager = GridLayoutManager(this,18,RecyclerView.VERTICAL,false)
+        findViewById<RecyclerView>(R.id.rc_table3).layoutManager = GridLayoutManager(this,18,RecyclerView.VERTICAL,false)
+        findViewById<RecyclerView>(R.id.rc_table4).layoutManager = GridLayoutManager(this,18,RecyclerView.VERTICAL,false)
+        findViewById<RecyclerView>(R.id.rc_table5).layoutManager = GridLayoutManager(this,18,RecyclerView.VERTICAL,false)
+        findViewById<RecyclerView>(R.id.rc_table6).layoutManager = GridLayoutManager(this,18,RecyclerView.VERTICAL,false)
+        findViewById<RecyclerView>(R.id.rc_table7).layoutManager = GridLayoutManager(this,18,RecyclerView.VERTICAL,false)
+        findViewById<RecyclerView>(R.id.rc_table8).layoutManager = GridLayoutManager(this,18,RecyclerView.VERTICAL,false)
     }
 }
