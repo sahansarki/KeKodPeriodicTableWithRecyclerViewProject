@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kekodperiodictablewithrecyclerviewproject.databinding.AdapterItemElementBinding
 
+
 class TableAdapter(private val elementList: ArrayList<Element>, private val type: Type) :
     RecyclerView.Adapter<TableViewHolder>() {
 
@@ -21,6 +22,10 @@ class TableAdapter(private val elementList: ArrayList<Element>, private val type
             parent,
             false
         )
+
+        //val bindingPop = CustompopupBinding.inflate(LayoutInflater.from(parent.context))
+
+        //val bindingPop = DataBindingUtil.inflate<CustompopupBinding>(inflater,R.layout.custompopup,null,false)
 
         return TableViewHolder(binding)
     }

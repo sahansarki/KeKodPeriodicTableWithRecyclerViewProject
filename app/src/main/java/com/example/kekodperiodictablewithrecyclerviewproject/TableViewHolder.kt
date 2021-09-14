@@ -1,25 +1,82 @@
 package com.example.kekodperiodictablewithrecyclerviewproject
 
+import android.app.Dialog
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
-import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kekodperiodictablewithrecyclerviewproject.databinding.AdapterItemElementBinding
 
-class TableViewHolder(private val binding: AdapterItemElementBinding) :
+
+class TableViewHolder(
+    private val binding: AdapterItemElementBinding,
+) :
     RecyclerView.ViewHolder(binding.root) {
+
 
     fun bind(element: Element) {
 
         binding.element = element
 
+        when (element.elementNo) {
+            in 0..2 -> binding.card.setBackgroundColor(
+                ContextCompat.getColor(
+                    binding.root.context,
+                    R.color.design_default_color_error
+                )
+            )
+            in 3..10 -> binding.card.setBackgroundColor(
+                ContextCompat.getColor(
+                    binding.root.context,
+                    R.color.purple_500
+                )
+            )
+            in 11..18 -> binding.card.setBackgroundColor(
+                ContextCompat.getColor(
+                    binding.root.context,
+                    R.color.teal_200
+                )
+            )
+            in 19..36 -> binding.card.setBackgroundColor(
+                ContextCompat.getColor(
+                    binding.root.context,
+                    R.color.design_default_color_primary_dark
+                )
+            )
+            in 37..54 -> binding.card.setBackgroundColor(
+                ContextCompat.getColor(
+                    binding.root.context,
+                    R.color.yellow
+                )
+            )
+            in 55..86 -> binding.card.setBackgroundColor(
+                ContextCompat.getColor(
+                    binding.root.context,
+                    R.color.green
+                )
+            )
+            in 87..118 -> binding.card.setBackgroundColor(
+                ContextCompat.getColor(
+                    binding.root.context,
+                    R.color.pink
+                )
+            )
+        }
+
+
         binding.card.setOnClickListener {
-            Toast.makeText(
-                binding.root.context,
-                "Clicked to ${element.elementFullName}",
-                Toast.LENGTH_SHORT
-            ).show()
+
+            val myDialog = Dialog(binding.root.context)
+
+            myDialog.setContentView(R.layout.custompopup)
+            myDialog.findViewById<TextView>(R.id.elementNo).text =
+                "Element No = ${element.elementNo}"
+            myDialog.findViewById<TextView>(R.id.elementShortName).text =
+                "Element Symbol = ${element.elementShortName}"
+            myDialog.findViewById<TextView>(R.id.elementLongName).text =
+                "Element Name = ${element.elementFullName}"
+
+            myDialog.show()
         }
 
 
