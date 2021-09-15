@@ -12,4 +12,6 @@
     <color name="yellow">#ECBA40</color>
     <color name="pink">#ED015E</color>
     <color name="lightgreen">#8EC85B</color>
+    <color name="uplabscolor">#20242B</color>
+    <color name="barcolor">#31343D</color>
 </resources>

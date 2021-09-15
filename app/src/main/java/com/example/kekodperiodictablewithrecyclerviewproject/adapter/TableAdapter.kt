@@ -2,6 +2,7 @@ package com.example.kekodperiodictablewithrecyclerviewproject.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.Window
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kekodperiodictablewithrecyclerviewproject.model.Element

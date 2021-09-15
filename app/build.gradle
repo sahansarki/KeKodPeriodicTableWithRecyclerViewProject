@@ -23,7 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    buildFeatures{
+    buildFeatures {
         dataBinding true
     }
     compileOptions {
@@ -32,6 +32,11 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    defaultConfig {
+        renderscriptTargetApi 31
+        renderscriptSupportModeEnabled true
     }
 }
 
@@ -45,4 +50,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation "com.airbnb.android:lottie:4.1.0"
+    implementation 'com.eightbitlab:blurview:1.6.6'
+
+    implementation 'io.alterac.blurkit:blurkit:1.1.0'
+
+
 }
