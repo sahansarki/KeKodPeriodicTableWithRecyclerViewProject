@@ -1,9 +1,13 @@
-package com.example.kekodperiodictablewithrecyclerviewproject
+package com.example.kekodperiodictablewithrecyclerviewproject.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kekodperiodictablewithrecyclerviewproject.model.Element
+import com.example.kekodperiodictablewithrecyclerviewproject.R
+import com.example.kekodperiodictablewithrecyclerviewproject.viewholder.TableViewHolder
+import com.example.kekodperiodictablewithrecyclerviewproject.Enum.Type
 import com.example.kekodperiodictablewithrecyclerviewproject.databinding.AdapterItemElementBinding
 
 
@@ -23,9 +27,6 @@ class TableAdapter(private val elementList: ArrayList<Element>, private val type
             false
         )
 
-        //val bindingPop = CustompopupBinding.inflate(LayoutInflater.from(parent.context))
-
-        //val bindingPop = DataBindingUtil.inflate<CustompopupBinding>(inflater,R.layout.custompopup,null,false)
 
         return TableViewHolder(binding)
     }

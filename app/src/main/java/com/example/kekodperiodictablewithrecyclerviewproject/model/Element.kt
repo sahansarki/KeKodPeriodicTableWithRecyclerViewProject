@@ -1,4 +1,4 @@
-package com.example.kekodperiodictablewithrecyclerviewproject
+package com.example.kekodperiodictablewithrecyclerviewproject.model
 
 data class Element(
     val elementNo : Int,

@@ -1,11 +1,13 @@
-package com.example.kekodperiodictablewithrecyclerviewproject
+package com.example.kekodperiodictablewithrecyclerviewproject.viewholder
 
 import android.app.Dialog
 import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kekodperiodictablewithrecyclerviewproject.R
 import com.example.kekodperiodictablewithrecyclerviewproject.databinding.AdapterItemElementBinding
+import com.example.kekodperiodictablewithrecyclerviewproject.model.Element
 
 
 class TableViewHolder(
@@ -54,6 +56,7 @@ class TableViewHolder(
                     binding.root.context,
                     R.color.green
                 )
+
             )
             in 87..118 -> binding.card.setBackgroundColor(
                 ContextCompat.getColor(
@@ -69,6 +72,10 @@ class TableViewHolder(
             val myDialog = Dialog(binding.root.context)
 
             myDialog.setContentView(R.layout.custompopup)
+
+            myDialog.window?.setWindowAnimations(R.style.AnimationForDialog)
+
+
             myDialog.findViewById<TextView>(R.id.elementNo).text =
                 "Element No = ${element.elementNo}"
             myDialog.findViewById<TextView>(R.id.elementShortName).text =

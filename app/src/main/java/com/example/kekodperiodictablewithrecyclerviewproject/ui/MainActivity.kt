@@ -1,12 +1,14 @@
-package com.example.kekodperiodictablewithrecyclerviewproject
+package com.example.kekodperiodictablewithrecyclerviewproject.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kekodperiodictablewithrecyclerviewproject.mockData.DummyData
+import com.example.kekodperiodictablewithrecyclerviewproject.R
+import com.example.kekodperiodictablewithrecyclerviewproject.adapter.TableAdapter
+import com.example.kekodperiodictablewithrecyclerviewproject.Enum.Type
 import com.example.kekodperiodictablewithrecyclerviewproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

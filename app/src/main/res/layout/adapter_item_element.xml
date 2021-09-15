@@ -5,7 +5,7 @@
     <data>
         <variable
             name="element"
-            type="com.example.kekodperiodictablewithrecyclerviewproject.Element" />
+            type="com.example.kekodperiodictablewithrecyclerviewproject.model.Element" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
+            android:textStyle="bold"
             android:text="@{element.elementShortName}" />
 
     </androidx.cardview.widget.CardView>
