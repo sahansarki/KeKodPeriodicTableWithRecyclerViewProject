@@ -2,17 +2,12 @@ package com.example.kekodperiodictablewithrecyclerviewproject.viewholder
 
 import android.app.Dialog
 import android.view.View
-import android.view.ViewGroup
-import android.view.Window
-import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kekodperiodictablewithrecyclerviewproject.R
 import com.example.kekodperiodictablewithrecyclerviewproject.databinding.AdapterItemElementBinding
 import com.example.kekodperiodictablewithrecyclerviewproject.model.Element
-import eightbitlab.com.blurview.BlurView
-import eightbitlab.com.blurview.RenderScriptBlur
 
 
 class TableViewHolder(
@@ -77,11 +72,8 @@ class TableViewHolder(
 
             val myDialog = Dialog(binding.root.context)
 
-            //myDialog.window!!.addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND)
+
             myDialog.setContentView(R.layout.custompopup)
-
-
-            //myDialog.window?.setWindowAnimations(R.style.AnimationForDialog)
 
 
             myDialog.findViewById<TextView>(R.id.elementNo).text =
